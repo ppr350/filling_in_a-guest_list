@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Filling in a Guest List</title>
+    </head>
+    <body>
+        <h1>Filling in a Guest List (or two)</h1>
+        <div class="admitted"></div>
+        <div class="refused"></div>
+
+        <script>
+
+            const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', "Kay", "Bruce"];
+
+            const admitted = document.querySelector('.admitted');
+            const refused = document.querySelector('.refused');
+            refused.textContent = 'Refuse : ';
+            admitted.textContent = 'Admit : ';
+
+
+
+
+            for (const person of people) {
+                //console.log(person);
+
+                if (person === 'Phil') {
+                    //console.log("Not going");
+                    refused.textContent += person + ", ";
+                } else if (person === 'Lola') {
+                    //console.log("Not going");
+                    refused.textContent += person + ", ";
+                } else {
+                    //console.log("Going");
+                    admitted.textContent += person + ", ";
+                }
+                
+
+        
+            }
+
+
+
+        </script>
+    </body>
+</html>
