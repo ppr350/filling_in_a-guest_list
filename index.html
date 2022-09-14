@@ -21,27 +21,29 @@
             admitted.textContent = 'Admit : ';
 
 
+            let personNotGoing = [];
+            let personGoing = [];
 
 
             for (const person of people) {
                 //console.log(person);
-
                 if (person === 'Phil') {
-                    //console.log("Not going");
-                    refused.textContent += person + ", ";
+                    //refused.textContent += person + ", ";
+                    personNotGoing.push([person]);
                 } else if (person === 'Lola') {
-                    //console.log("Not going");
-                    refused.textContent += person + ", ";
+                    //refused.textContent += person + ", ";
+                    personNotGoing.push([person]);
                 } else {
-                    //console.log("Going");
-                    admitted.textContent += person + ", ";
+                    //admitted.textContent += person + ", ";
+                    personGoing.push([person]);
                 }
-                
-
-        
             }
 
-
+            let noGoStr = personNotGoing.join(", ");
+            let goStr = personGoing.join(", ");
+            
+            refused.textContent += `${noGoStr}.`;
+            admitted.textContent += `${goStr}.`;
 
         </script>
     </body>
